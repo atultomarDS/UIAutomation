@@ -4,11 +4,10 @@ import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import enpoints.UserEndpoint;
 import io.restassured.response.Response;
-import objects.User;
+import dataObjects.User;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 
-import javax.annotation.Resource;
 import java.io.*;
 import java.util.List;
 
