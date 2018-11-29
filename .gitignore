@@ -1,0 +1,11 @@
+target/
+automation.out
+.idea
+*.DS_Store
+.DS_Store/
+*.iml
+.classpath
+.project
+.settings/
+*.ipr
+*.iws
