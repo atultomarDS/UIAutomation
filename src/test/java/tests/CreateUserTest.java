@@ -105,7 +105,7 @@ public class CreateUserTest extends BaseTest {
                     .enterPassword(xssScript)
                     .setConfirmationPassword(xssScript)
                     .submit();
-            verifyCurrentURL(Url.ALL_USERS.getValue());
+            //verifyCurrentURL(Url.ALL_USERS.getValue());
             User actualUser = UserHelper.getUser(xssScript);
             Assert.assertEquals("Email is not same", actualUser.email, xssScript);
             Assert.assertEquals("Name is not same", actualUser.name, xssScript);
@@ -142,9 +142,8 @@ public class CreateUserTest extends BaseTest {
         verifyCurrentURL(Url.ALL_USERS.getValue());
     }
 
-
-    @AfterClass
-    public void cleanUp () {
+    @Test
+    public void verifyUserDeletion () {
         userHelper.deleteAllUsers();
         userHelper.checkNumberOfUsers(0);
 
